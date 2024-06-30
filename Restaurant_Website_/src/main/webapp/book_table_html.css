@@ -1,0 +1,73 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image:url("images/TableBook.jpg");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+}
+.book_table{
+    display:flex;
+    flex-direction:column;
+    justify-content: center; 
+    align-items: center;
+    width:500px;
+    height:500px;
+    background-color: #e8d0e8;
+    border-radius:25px;
+  }
+  .FORM input{
+    border:3px solid black;
+    font-size:14px;
+
+}
+.FORM label{
+    font-size:20px;
+}
+#name{
+    width:300px;
+    height:25px;
+    background-color: #f6f0ee;
+}
+#email{
+    width:300px;
+    height:25px;
+    background-color: #f6f0ee;
+}
+#date{
+    width:300px;
+    height:25px;
+    background-color: #f6f0ee;
+}
+#time{
+    width:300px;
+    height:25px;
+    background-color: #f6f0ee;
+}
+button{
+    height:30px;
+    width:70px;
+    
+    justify-content: center;
+        align-items: center;
+    
+    margin: 0 auto;
+
+    font-size:20px;
+    background-color:#D862BC;
+    border-radius:10px;
+    
+}
+button:hover{
+    background-color: #d86282;
+}

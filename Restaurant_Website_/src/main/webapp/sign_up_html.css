@@ -1,0 +1,81 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url("images/signup.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    
+    
+}
+.sign_up{
+  display:flex;
+  flex-direction:column;
+  justify-content: center; 
+  align-items: center;
+  width:500px;
+  height:500px;
+  background-color: rgba(170, 181, 166, 0.513);
+  border-radius:25px;
+}
+/* h2{
+    text-align: center;
+}
+form{
+    align-self: center;
+    font-size:medium;
+} */
+.FORM input{
+    border:3px solid black;
+    font-size:14px;
+
+}
+.FORM label{
+    font-size:20px;
+}
+#name{
+    width:300px;
+    height:25px;
+    background-color: #FFFBDA;
+}
+#email{
+    width:300px;
+    height:25px;
+    background-color: #FFFBDA;
+}
+#password{
+    width:300px;
+    height:25px;
+    background-color: #FFFBDA;
+}
+.choice{
+    font-size:18px;
+}
+a{
+    font-size:14px;
+}
+
+button{
+    height:30px;
+    width:70px;
+    margin-left:220px;
+   
+    font-size:20px;
+    background-color:#FFBB70;
+    border-radius:10px;
+    
+}
+button:hover{
+    background-color: #ADD899;
+}

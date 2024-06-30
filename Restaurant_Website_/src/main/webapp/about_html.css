@@ -1,0 +1,49 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image:url("images/about.jpg");
+    background-size:cover;
+    
+}
+
+.about{
+    height:35rem;
+    width:35rem;
+    margin-top:3rem;
+    margin-left:5rem;
+    display:flex;
+    align-items:center;
+    
+}
+
+.content{
+    margin-left:2rem;
+    margin-right: 2rem;
+    font-size:1.5rem;
+    color:whitesmoke;
+}
+
+@media(max-width:540px){
+	@media (max-width: 540px) {
+    body {
+        background-size:contain;
+    }
+
+    .about {
+        height:28rem;
+        width:28rem;
+        margin-top:2.5rem;
+        margin-left:2.5rem;
+    }
+
+    .content {
+        font-size:1.125rem;
+        margin-left:1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+}

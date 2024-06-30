@@ -1,0 +1,479 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* starting of navbar */
+
+.logo h1 {
+    font-family: "Playwrite AU QLD", cursive;
+}
+.logo h1 a {
+    text-decoration: none;
+    color: #FF7F3E;
+}
+.logo h1 a:hover {
+    color: #D20062;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 99%;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    border-radius: 1.2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+.navlist_center {
+    display: flex;
+    gap: 4rem; /* Adjust gap to fit within viewport */
+    align-self: center;
+}
+.navlist_right {
+    display: flex;
+    gap: 4rem; /* Adjust gap to fit within viewport */
+    align-self: center;
+}
+.navlist_center li {
+    list-style: none;
+}
+.navlist_right li {
+    list-style: none;
+}
+
+.navlist_center a {
+    text-decoration: none;
+    color: #FDFFD2;
+    font-size: 1.2rem;
+    letter-spacing: .08rem;
+}
+.navlist_right a {
+    text-decoration: none;
+    color: #FDFFD2;
+    font-size: 1.2rem;
+    letter-spacing: .08rem;
+}
+.navlist_center :hover {
+    color: #ed8516;
+}
+.navlist_right :hover {
+    color: #ed8516;
+}
+.contact-info {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border: 1px solid #FF7F3E;
+    border-radius: 45%;
+    z-index: 1;
+    top: 100%; /* Position below the contact item */
+    left: 82.78%;
+}
+
+.list_item:hover .contact-info {
+    display: block;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+.hero .left, .hero .right {
+    background-color: #071952;
+    padding-left: 1rem; 
+    flex: 1 1 50%; 
+    max-width: 50%; 
+}
+.hero .hero_split {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.left .content {
+    color: white;
+}
+.content h1 {
+    font-size: 5rem;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: .10rem #FF7F3E;
+    letter-spacing: .2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 3rem;
+    max-width: 100%; /* Ensures heading doesn't overflow */
+}
+.content p {
+    font-size: 1.2rem;
+    max-width: 100%;
+    margin:1rem 6rem 3rem 2rem;
+   
+}
+.content a {
+    padding: 1rem 2rem;
+    border: .2rem solid white;
+    font-size: 1.3rem;
+    border-radius: 4rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    background: #FF7F3E;
+    color: black;
+    margin-left:11rem;
+    
+}
+.content a:hover {
+    color: #D20062;
+}
+
+.right {
+    background-image: url("images/chef.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat:no-repeat;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.middle .circle {
+    width: 9rem;
+    height: 9rem;
+    background-color: white;
+    border-radius: 8rem;
+    background-position: center;
+    background-size: cover;
+}
+.middle .circle:nth-child(1) {
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+}
+.middle .circle:nth-child(2) {
+    background-image: url(images/cake.jpeg);
+    background-size: cover;
+    background-position: top;
+    margin: 2rem 0;
+}
+.middle .circle:nth-child(3) {
+    background-image: url(images/juice.png);
+    background-size: cover;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #373A40;
+    color: #FDFFD2;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social h2 {
+    margin-bottom: .5rem;
+    font-family: "Playwrite AU QLD", cursive;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #FDFFD2;
+    
+}
+.footer-copyright{
+	margin-top:1rem;
+}
+
+ @media(max-width:540px){
+	 .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 1rem;
+         justify-content:space-evenly;
+    }
+    .navlist_center, .navlist_right {
+        flex-direction: column;
+        gap: .5rem; /* Adjust gap for column layout */
+        width: 100%;
+    
+    }
+    .logo h1{
+       font-size:2.3rem;
+    }
+    .navlist_center a, .navlist_right a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+    .contact-info {
+        left: 0; /* Adjust contact info position */
+        right: 0;
+    }
+    .content h1 {
+    font-size: 1.2rem;
+    padding-right:9rem;
+    padding-top:16.5rem;
+    
+    margin-left:.2rem;
+    }
+    .content p {
+    font-size: 1rem;
+    padding-right:3rem;
+    margin-left:.5rem;
+    margin-bottom:1rem;
+    }
+    .content a {
+    padding:.20rem .45rem;
+    margin-left:.5rem;
+    font-size:1.2rem;
+    }
+    .hero .right{
+      padding-right:0;
+    }
+    .middle .circle {
+    width: 5rem;
+    height: 5rem;
+    
+    border-radius: 8rem;
+   
+    background-size: cover;
+}
+  .right{
+  background-size:90%;
+  
+  }
+  .contact-info {
+    padding-left:8rem;
+    
+  }
+  .footer-social h2 {
+    margin-bottom: .3rem;
+    margin-top:1rem;
+    font-size: 1.2rem;
+}
+.social-icons {
+    
+    gap: 2rem;
+}
+.footer-copyright{
+	margin-top:.5rem;
+	
+}
+}
+@media (width: 1024px) and (height: 600px){
+ .navbar{
+ flex-direction:row;
+ justify-content:space-between;
+ }
+ .logo h1 a{
+   font-size:2.2rem;
+ }
+ .navlist_center {
+   gap:1.4rem;
+ }
+ .navlist_right {
+   gap:1.4rem;
+ }
+  .content h1 {
+    font-size: 2rem;
+    margin-left:4rem;
+    
+    }
+    .content p {
+    font-size: 1.5rem;
+   
+    }
+    .content a {
+      padding:.5rem 1.2rem;
+      margin-left:6rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 912px) 
+       {
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 1rem;
+        justify-content:space-evenly;
+    }
+    .navlist_center, .navlist_right {
+        flex-direction: column;
+        gap: .5rem; 
+        width: 100%;
+    
+    }
+    .logo h1{
+       font-size:3.5rem;
+    }
+    .navlist_center a, .navlist_right a {
+        font-size: 2rem; 
+    }
+    .contact-info {
+        left: 0; 
+        right: 0;
+    }
+    .content h1 {
+    font-size: 3rem;
+    padding-right:9rem;
+    padding-top:16.5rem;
+    
+    margin-left:.4rem;
+    }
+    .content p {
+    font-size: 1.5rem;
+    padding-right:3rem;
+    margin-left:.5rem;
+    margin-bottom:1.8rem;
+    }
+    .content a {
+    padding:.25rem .80rem;
+    margin-left:.5rem;
+    font-size:1.4rem;
+    }
+    .hero .right{
+      padding-right:0;
+    }
+    .middle .circle {
+    width: 7rem;
+    height: 7rem;
+    
+    border-radius: 8rem;
+   
+    background-size: cover;
+}
+  .right{
+  background-size:90%;
+  
+  }
+  .contact-info {
+    padding-left:8rem;
+    
+  }
+  .footer-social h2 {
+    margin-bottom: .3rem;
+    margin-top:1rem;
+    font-size: 1.2rem;
+}
+.social-icons {
+    
+    gap: 2rem;
+}
+.footer-copyright{
+	margin-top:.5rem;
+	
+}
+}
+@media (width: 1024px) and (height: 1366px){
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 1rem;
+        justify-content:space-evenly;
+    }
+    .navlist_center, .navlist_right {
+        flex-direction: column;
+        gap: .5rem; 
+        width: 100%;
+    
+    }
+    .logo h1{
+       font-size:3.5rem;
+    }
+    .navlist_center a, .navlist_right a {
+        font-size: 2rem; 
+    }
+    .contact-info {
+        left: 0; 
+        right: 0;
+    }
+    .content h1 {
+    font-size: 3rem;
+    padding-right:9rem;
+    padding-top:16.5rem;
+    
+    margin-left:.4rem;
+    }
+    .content p {
+    font-size: 1.5rem;
+    padding-right:3rem;
+    margin-left:.5rem;
+    margin-bottom:1.8rem;
+    }
+    .content a {
+    padding:.25rem .80rem;
+    margin-left:.5rem;
+    font-size:1.4rem;
+    }
+    .hero .right{
+      padding-right:0;
+    }
+    .middle .circle {
+    width: 7rem;
+    height: 7rem;
+    
+    border-radius: 8rem;
+   
+    background-size: cover;
+}
+  .right{
+  background-size:90%;
+  
+  }
+  .contact-info {
+    padding-left:8rem;
+    
+  }
+  .footer-social h2 {
+    margin-bottom: .3rem;
+    margin-top:1rem;
+    font-size: 1.2rem;
+}
+.social-icons {
+    
+    gap: 2rem;
+}
+.footer-copyright{
+	margin-top:.5rem;
+	
+}
+}
